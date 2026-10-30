@@ -1,0 +1,85 @@
+:root {
+  /* Brand Navy & Blues */
+  --color-primary-navy: #001e46;
+  --color-deep-navy: #001533;
+  --color-sidebar-navy: #1a2f4c;
+  --color-sidebar-hover: #223c61;
+  --color-sidebar-active: #155eef;
+  
+  /* Primary Action Blue */
+  --color-royal-blue: #155eef;
+  --color-royal-blue-hover: #1048b8;
+  --color-royal-blue-light: #eff4fe;
+  
+  /* Indian Tricolour / Orange Highlights */
+  --color-accent-orange: #f59e0b;
+  --color-accent-orange-hover: #d97706;
+  --color-accent-orange-light: #fffbeb;
+  --color-saffron: #f37406;
+  
+  /* Canvas & Panel Backgrounds */
+  --color-canvas-bg: #f8fbfe;
+  --color-canvas-alt: #eef7fe;
+  --color-card-bg: #ffffff;
+  --color-card-muted: #f9fbfd;
+  
+  /* Borders & Dividers */
+  --color-border-light: #dce5ef;
+  --color-border-subtle: #eaecf0;
+  --color-border-focus: #155eef;
+  
+  /* Typography */
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --color-text-main: #101828;
+  --color-text-secondary: #475467;
+  --color-text-muted: #667085;
+  --color-text-white: #ffffff;
+  
+  /* Semantic Status Colors */
+  --color-success: #16a34a;
+  --color-success-bg: #f0fdf4;
+  --color-success-border: #bbf7d0;
+  
+  --color-warning: #f59e0b;
+  --color-warning-bg: #fffbeb;
+  --color-warning-border: #fde68a;
+  
+  --color-danger: #dc2626;
+  --color-danger-bg: #fef2f2;
+  --color-danger-border: #fecaca;
+  
+  --color-info: #0284c7;
+  --color-info-bg: #f0f9ff;
+  --color-info-border: #bae6fd;
+  
+  --color-mock: #6366f1;
+  --color-mock-bg: #eef2ff;
+  --color-mock-border: #c7d2fe;
+  
+  /* Spacing */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-full: 9999px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(16, 24, 40, 0.1), 0 2px 4px -2px rgba(16, 24, 40, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(16, 24, 40, 0.1), 0 4px 6px -4px rgba(16, 24, 40, 0.05);
+  
+  /* Layout Dimensions */
+  --header-utility-height: 34px;
+  --header-main-height: 68px;
+  --sidebar-width: 260px;
+  --sidebar-collapsed-width: 70px;
+  
+  /* Accessibility Font Size Multiplier */
+  --font-scale: 1;
+}
+
+/* Accessibility font resizing */
+html[data-font-size="sm"] { --font-scale: 0.9; }
+html[data-font-size="md"] { --font-scale: 1; }
+html[data-font-size="lg"] { --font-scale: 1.12; }
+
