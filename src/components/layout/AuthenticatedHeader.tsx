@@ -83,7 +83,7 @@ export const AuthenticatedHeader: React.FC<AuthenticatedHeaderProps> = ({
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
               <span style={{ fontSize: '16px', fontWeight: 800, color: '#001e46' }}>SATYA-APAAR</span>
-              <span style={{ background: '#155eef', color: '#fff', fontSize: '10px', fontWeight: 700, padding: '1px 5px', borderRadius: '3px' }}>2.1</span>
+              
             </div>
             <span style={{ fontSize: '10px', color: '#64748b', fontWeight: 500 }}>AICTE Verification Portal</span>
           </div>

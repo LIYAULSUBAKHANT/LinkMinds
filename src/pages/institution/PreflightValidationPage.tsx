@@ -66,7 +66,7 @@ export const PreflightValidationPage: React.FC = () => {
     : issues.filter(i => i.severity === filterSeverity || (filterSeverity === 'Error' && i.severity === 'Duplicate'));
 
   const handleDownloadReport = () => {
-    const reportContent = `SATYA-APAAR 2.1 PREFLIGHT VALIDATION AUDIT REPORT
+    const reportContent = `SATYA-APAAR PREFLIGHT VALIDATION AUDIT REPORT
 Batch ID: BATCH-2026-0042
 Institution: Bannari Amman Institute of Technology (BIT Sathy)
 Total Records Evaluated: 500

@@ -60,16 +60,7 @@ export const PublicHeader: React.FC = () => {
               }}>
                 SATYA-APAAR
               </span>
-              <span style={{
-                backgroundColor: '#155eef',
-                color: '#ffffff',
-                fontSize: '11px',
-                fontWeight: 700,
-                padding: '2px 6px',
-                borderRadius: '4px',
-              }}>
-                2.1
-              </span>
+              
             </div>
             <span style={{
               fontSize: '10.5px',

@@ -24,7 +24,7 @@ export const SubmissionTrackingPage: React.FC = () => {
   });
 
   const handleDownloadReceipt = (batchNum: string) => {
-    const receipt = `AICTE SATYA-APAAR 2.1 SUBMISSION RECEIPT
+    const receipt = `AICTE SATYA-APAAR SUBMISSION RECEIPT
 Batch ID: ${batchNum}
 Institution: Bannari Amman Institute of Technology (BIT Sathy)
 Generated At: ${new Date().toISOString()}

@@ -17,7 +17,7 @@ export const IntegrationHealthPage: React.FC = () => {
     {
       id: 'REQ-2026-7834',
       service: 'Institution ERP Connector',
-      endpoint: '/api/v2.1/student-sync',
+      endpoint: '/api/v1/student-sync',
       error: '504 Gateway Timeout',
       retries: '2/3',
       nextRetry: '10:35 AM',

@@ -229,7 +229,7 @@ export const PolicyIntakePage: React.FC = () => {
               </thead>
               <tbody>
                 <tr>
-                  <td style={{ fontWeight: 600, color: '#001e46', fontFamily: 'monospace' }}>AICTE-APH-2026-V2.1</td>
+                  <td style={{ fontWeight: 600, color: '#001e46', fontFamily: 'monospace' }}>AICTE-APH-2026</td>
                   <td>Gazette of India Ext. Part III, Sec. 4</td>
                   <td>26 Oct 2026</td>
                   <td>2026–2027</td>

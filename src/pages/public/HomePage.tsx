@@ -564,7 +564,7 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* 6. ABOUT SATYA-APAAR 2.1 SPLIT SECTION WITH 4 BENEFIT CARDS */}
+      {/* 6. ABOUT SATYA-APAAR SPLIT SECTION WITH 4 BENEFIT CARDS */}
       <section style={{
         maxWidth: '1280px',
         margin: '0 auto 64px auto',
@@ -578,10 +578,10 @@ export const HomePage: React.FC = () => {
         }}>
           <div>
             <h2 style={{ fontSize: '26px', color: '#001e46', fontWeight: 800, marginBottom: '14px' }}>
-              About SATYA-APAAR 2.1
+              About SATYA-APAAR
             </h2>
             <p style={{ fontSize: '14px', color: '#475467', lineHeight: 1.7, marginBottom: '16px' }}>
-              SATYA-APAAR 2.1 is an AI-assisted and auditable platform designed to reconcile student admissions, verify APAAR identities, monitor approved seat utilisation, and ensure zero unallocated or duplicate enrolments across AICTE-approved institutions nationwide.
+              SATYA-APAAR is an AI-assisted and auditable platform designed to reconcile student admissions, verify APAAR identities, monitor approved seat utilisation, and ensure zero unallocated or duplicate enrolments across AICTE-approved institutions nationwide.
             </p>
             <p style={{ fontSize: '14px', color: '#475467', lineHeight: 1.7, marginBottom: '24px' }}>
               By connecting institutional data with APAAR registries and applying transparent temporal integrity rules (TEIE), the platform empowers regulatory authorities with real-time, tamper-evident oversight.

@@ -30,16 +30,7 @@ export const Footer: React.FC = () => {
               <span style={{ fontSize: '20px', fontWeight: 800, letterSpacing: '-0.02em', color: '#ffffff' }}>
                 SATYA-APAAR
               </span>
-              <span style={{
-                backgroundColor: '#155eef',
-                color: '#ffffff',
-                fontSize: '11px',
-                fontWeight: 700,
-                padding: '2px 6px',
-                borderRadius: '4px',
-              }}>
-                2.1
-              </span>
+              
             </div>
             <p style={{ fontSize: '13px', color: '#cbd5e1', lineHeight: '1.6', marginBottom: '16px' }}>
               Student Admission Trust & Yield Assurance for AICTE-approved institutions.
@@ -126,7 +117,7 @@ export const Footer: React.FC = () => {
           color: '#94a3b8',
         }}>
           <div>
-            © 2026 SATYA-APAAR 2.1 — All Rights Reserved. All India Council for Technical Education (AICTE).
+            © 2026 SATYA-APAAR — All Rights Reserved. All India Council for Technical Education (AICTE).
           </div>
           <div style={{ display: 'flex', gap: '16px' }}>
             <span style={{ color: '#94a3b8' }}>Privacy Policy</span>

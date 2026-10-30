@@ -1,4 +1,4 @@
-# SATYA-APAAR 2.1 — Student Admission Trust & Yield Assurance
+# SATYA-APAAR — Student Admission Trust & Yield Assurance
 
 **All India Council for Technical Education (AICTE)**  
 **Smart India Hackathon (SIH) 2026** | **Problem Statement:** SIH26263  
@@ -9,7 +9,7 @@
 
 ## 1. Project Overview
 
-SATYA-APAAR 2.1 is an institutional governance, identity reconciliation, and admission integrity assurance platform designed for AICTE-approved institutions nationwide. It bridges institutional aggregate reporting with the Ministry of Education's 12-digit **Automated Permanent Academic Account Registry (APAAR)** identity ecosystem to prevent ghost admissions, multi-institution seat collisions, and quota inflation.
+SATYA-APAAR is an institutional governance, identity reconciliation, and admission integrity assurance platform designed for AICTE-approved institutions nationwide. It bridges institutional aggregate reporting with the Ministry of Education's 12-digit **Automated Permanent Academic Account Registry (APAAR)** identity ecosystem to prevent ghost admissions, multi-institution seat collisions, and quota inflation.
 
 This repository hosts the **Full-Fidelity Production Frontend**, engineered with React, TypeScript, and Vite. It runs fully standalone with deterministic synthetic data, local Web Crypto SHA-256 hash chaining, client-side CSV/XLSX preflight parsing, and role-based access control.
 
@@ -43,7 +43,7 @@ Generates an optimized, chunked static bundle in `dist/` verified with zero warn
 
 ## 3. Demo Role Credentials & One-Click Switcher
 
-For jury evaluation and demonstration convenience, SATYA-APAAR 2.1 includes both a credentialed login screen (`/login`) and a **Demo Role Switcher** dropdown in the authenticated header:
+For jury evaluation and demonstration convenience, SATYA-APAAR includes both a credentialed login screen (`/login`) and a **Demo Role Switcher** dropdown in the authenticated header:
 
 | Role Name | Demo Email | Demo Password | Default Dashboard | Key Permissions |
 | :--- | :--- | :--- | :--- | :--- |
