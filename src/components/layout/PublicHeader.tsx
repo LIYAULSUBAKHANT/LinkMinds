@@ -26,7 +26,7 @@ export const PublicHeader: React.FC = () => {
       position: 'sticky',
       top: 0,
       zIndex: 90,
-      height: '68px',
+      minHeight: '68px',
       display: 'flex',
       alignItems: 'center',
     }}>
@@ -38,9 +38,9 @@ export const PublicHeader: React.FC = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        height: '100%',
+        height: '68px',
       }}>
-        {/* Seamless High-Fidelity Modern Brand Logo */}
+        {/* Modern Vector Brand Mark (No raster emblem / AICTE logo artifacts) */}
         <BrandLogo size="md" subtitle="Student Admission Trust & Yield Assurance" />
 
         {/* Desktop Navigation: Exactly 5 links + Separate Login/Register CTA */}
@@ -126,7 +126,7 @@ export const PublicHeader: React.FC = () => {
               display: 'inline-flex',
               alignItems: 'center',
               gap: '7px',
-              padding: '8px 18px',
+              padding: '9px 20px',
               borderRadius: '6px',
               fontSize: '13.5px',
               fontWeight: 600,
