@@ -195,7 +195,7 @@ export const DataUploadPage: React.FC = () => {
       errorCount: 18,
       warningCount: 10,
       status: 'Preflight Validated',
-      version: 'v1.0',
+      version: 'v2.1',
       uploadedBy: 'Prof. K. Venkatesh',
     });
 

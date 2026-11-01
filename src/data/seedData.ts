@@ -310,7 +310,7 @@ export const SEED_SUBMISSIONS: SubmissionBatch[] = [
     errorCount: 18,
     warningCount: 10,
     status: 'Under Review',
-    version: 'v1.0',
+    version: 'v2.1',
     uploadedBy: 'Prof. K. Venkatesh'
   },
   {
@@ -571,7 +571,7 @@ export const SEED_AUDIT_LOGS: AuditEvent[] = [
     actor: 'Dr. Ramesh Sharma (aicte_admin)',
     role: 'AICTE Administrator',
     action: 'POLICY_UPDATE_APPROVED_INTAKE',
-    entityTarget: 'AICTE-APH-2026',
+    entityTarget: 'AICTE-APH-2026-V2.1',
     reason: 'Ratified AICTE Approved Process Handbook 2026-27 Master Quotas',
     previousHash: '3948102938102938102938102938102938102938102938102938102938102938',
     currentHash: 'f482019481029381029381029381029381029381029381029381029381029381'

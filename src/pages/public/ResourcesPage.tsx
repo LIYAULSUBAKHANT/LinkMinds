@@ -17,9 +17,9 @@ export const ResourcesPage: React.FC = () => {
       sno: 1,
       title: 'Institutional Admission Ingestion Manual',
       desc: 'Step-by-step specifications for preparing and uploading admission batches in CSV/Excel formats.',
-      version: 'v1.0',
+      version: 'v2.1',
       updated: '15 Oct 2026',
-      filename: 'SATYA_APAAR_Ingestion_Manual.pdf',
+      filename: 'SATYA_APAAR_Ingestion_Manual_v2.1.pdf',
     },
     {
       sno: 2,
@@ -41,7 +41,7 @@ export const ResourcesPage: React.FC = () => {
       sno: 4,
       title: 'SeatGuard Sanctioned Capacity & Quota Compliance',
       desc: 'Procedures for reconciliation of sanctioned intake vs. supernumerary allocations (EWS, TFW, NRI).',
-      version: 'v1.0',
+      version: 'v2.1',
       updated: '25 Oct 2026',
       filename: 'SeatGuard_Compliance_Handbook.pdf',
     },
@@ -80,12 +80,12 @@ export const ResourcesPage: React.FC = () => {
 
   const faqs = [
     {
-      q: 'What is the primary role of SATYA-APAAR in the AICTE ecosystem?',
-      a: 'SATYA-APAAR acts as a centralized admission assurance and reconciliation platform. It transforms institutional admission submissions into time-bounded enrolment records (TEIE), validates APAAR IDs, monitors approved seat quotas, and reconciles reported totals against student-level records.',
+      q: 'What is the primary role of SATYA-APAAR 2.1 in the AICTE ecosystem?',
+      a: 'SATYA-APAAR 2.1 acts as a centralized admission assurance and reconciliation platform. It transforms institutional admission submissions into time-bounded enrolment records (TEIE), validates APAAR IDs, monitors approved seat quotas, and reconciles reported totals against student-level records.',
     },
     {
-      q: 'Does SATYA-APAAR replace institutional ERPs or the APAAR registry?',
-      a: 'No. SATYA-APAAR does not replace institutional ERPs, APAAR, DigiLocker, or the Academic Bank of Credits (ABC). It interfaces with them via secure adapters to provide independent validation, reconciliation, and regulatory transparency.',
+      q: 'Does SATYA-APAAR 2.1 replace institutional ERPs or the APAAR registry?',
+      a: 'No. SATYA-APAAR 2.1 does not replace institutional ERPs, APAAR, DigiLocker, or the Academic Bank of Credits (ABC). It interfaces with them via secure adapters to provide independent validation, reconciliation, and regulatory transparency.',
     },
     {
       q: 'How does the platform handle foreign national students without an APAAR ID?',
@@ -102,7 +102,7 @@ export const ResourcesPage: React.FC = () => {
   ];
 
   const handleDownloadFile = (filename: string, content?: string) => {
-    const fileContent = content || `SATYA-APAAR Official Resource Document\nFilename: ${filename}\nAcademic Year 2026-27\nDownloaded from SATYA-APAAR Demonstration Portal\nAICTE Problem Statement SIH26263`;
+    const fileContent = content || `SATYA-APAAR 2.1 Official Resource Document\nFilename: ${filename}\nVersion: 2.1 | Academic Year 2026-27\nDownloaded from SATYA-APAAR 2.1 Demonstration Portal\nAICTE Problem Statement SIH26263`;
     const blob = new Blob([fileContent], { type: 'text/plain;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
@@ -300,17 +300,17 @@ export const ResourcesPage: React.FC = () => {
         {activeTab === 'api' && (
           <div style={{ backgroundColor: '#ffffff', padding: '24px', borderRadius: '8px', border: '1px solid #dce5ef' }}>
             <h2 style={{ fontSize: '18px', fontWeight: 700, color: '#001e46', marginBottom: '8px' }}>
-              SATYA-APAAR REST API Documentation 
+              SATYA-APAAR 2.1 REST API Documentation (v2.1)
             </h2>
             <p style={{ fontSize: '13px', color: '#64748b', marginBottom: '20px' }}>
               High-throughput JSON REST interfaces for institutional ERP synchronization and verifier queries.
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               {[
-                { method: 'POST', endpoint: '/api/v1/ingest/batch', desc: 'Uploads and validates candidate admission records asynchronously' },
-                { method: 'GET', endpoint: '/api/v1/reconciliation/{institution_id}', desc: 'Fetches real-time aggregate vs record reconciliation status' },
-                { method: 'GET', endpoint: '/api/v1/seatguard/ledger/{programme}', desc: 'Retrieves approved intake capacity and remaining quota balances' },
-                { method: 'POST', endpoint: '/api/v1/verify/credential', desc: 'Validates ConsentPass digital credential hash with zero student PII disclosure' },
+                { method: 'POST', endpoint: '/api/v2.1/ingest/batch', desc: 'Uploads and validates candidate admission records asynchronously' },
+                { method: 'GET', endpoint: '/api/v2.1/reconciliation/{institution_id}', desc: 'Fetches real-time aggregate vs record reconciliation status' },
+                { method: 'GET', endpoint: '/api/v2.1/seatguard/ledger/{programme}', desc: 'Retrieves approved intake capacity and remaining quota balances' },
+                { method: 'POST', endpoint: '/api/v2.1/verify/credential', desc: 'Validates ConsentPass digital credential hash with zero student PII disclosure' },
               ].map((api, idx) => (
                 <div key={idx} style={{ padding: '12px 16px', background: '#f8fafc', borderRadius: '6px', border: '1px solid #e2e8f0', display: 'flex', alignItems: 'center', gap: '14px', flexWrap: 'wrap' }}>
                   <span style={{
@@ -406,7 +406,7 @@ export const ResourcesPage: React.FC = () => {
               gap: '24px',
             }}>
               {[
-                { title: 'Overview of SATYA-APAAR Ingestion', duration: '4:20 mins', speaker: 'Technical Lead' },
+                { title: 'Overview of SATYA-APAAR 2.1 Ingestion', duration: '4:20 mins', speaker: 'Technical Lead' },
                 { title: 'Resolving Aggregate Variances & Column Mappings', duration: '6:15 mins', speaker: 'Admission Architect' },
                 { title: 'Review Case Decisioning for AICTE Officers', duration: '5:45 mins', speaker: 'Regulatory Officer' },
               ].map((vid, vIdx) => (
@@ -456,7 +456,7 @@ export const ResourcesPage: React.FC = () => {
                 <div style={{ backgroundColor: '#ffffff', borderRadius: '8px', maxWidth: '560px', width: '100%', padding: '24px' }}>
                   <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#001e46', marginBottom: '12px' }}>{activeVideoModal}</h3>
                   <div style={{ height: '240px', backgroundColor: '#0f172a', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#94a3b8', fontSize: '13px', textAlign: 'center', padding: '20px' }}>
-                    [Interactive Video Simulation: SATYA-APAAR Walkthrough. Live recording available in SIH presentation package.]
+                    [Interactive Video Simulation: SATYA-APAAR 2.1 Walkthrough. Live recording available in SIH presentation package.]
                   </div>
                   <div style={{ marginTop: '16px', display: 'flex', justifyContent: 'flex-end' }}>
                     <button onClick={() => setActiveVideoModal(null)} className="btn btn-secondary btn-sm">Close</button>

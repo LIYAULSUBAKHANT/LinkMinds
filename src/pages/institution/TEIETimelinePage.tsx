@@ -118,7 +118,7 @@ export const TEIETimelinePage: React.FC = () => {
             <span>Chronological Enrolment Episodes & Evidence Trail</span>
           </h3>
           <span style={{ fontSize: '12px', color: '#64748b' }}>
-            Evaluated by TEIE Engine
+            Evaluated by TEIE Engine (Version 2.1)
           </span>
         </div>
 

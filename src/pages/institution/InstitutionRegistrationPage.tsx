@@ -79,7 +79,7 @@ export const InstitutionRegistrationPage: React.FC = () => {
           <span className="badge badge-mock">Page 07 • Design Inferred</span>
         </div>
         <p style={{ fontSize: '13px', color: '#64748b' }}>
-          Onboard new AICTE-approved institutions to SATYA-APAAR to enable aggregate reconciliation and seat utilization tracking.
+          Onboard new AICTE-approved institutions to SATYA-APAAR 2.1 to enable aggregate reconciliation and seat utilization tracking.
         </p>
       </div>
 

@@ -62,7 +62,7 @@ export const IntegrityIntelligencePage: React.FC = () => {
             <h1 style={{ fontSize: '24px', fontWeight: 800, color: '#001e46' }}>
               Integrity Intelligence (AI & Rule Engine)
             </h1>
-            <span className="badge badge-info">Explainable AI • Active Model</span>
+            <span className="badge badge-info">Explainable AI • Model v2.1</span>
           </div>
           <p style={{ fontSize: '13px', color: '#64748b' }}>
             Transparent anomaly detection, peer benchmarking, and enrolment relationship graph analysis.

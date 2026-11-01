@@ -16,7 +16,7 @@ export const AboutPage: React.FC = () => {
           <div style={{ marginBottom: '8px', opacity: 0.85 }}>
             <span style={{ fontSize: '12px', color: '#93c5fd' }}>Home &gt; About Us</span>
           </div>
-          <h1 style={{ fontSize: '30px', fontWeight: 800, color: '#ffffff' }}>About SATYA-APAAR</h1>
+          <h1 style={{ fontSize: '30px', fontWeight: 800, color: '#ffffff' }}>About SATYA-APAAR 2.1</h1>
           <p style={{ fontSize: '14px', color: '#cbd5e1', marginTop: '6px', maxWidth: '720px' }}>
             A Transparent and Trusted Higher Education Ecosystem for AICTE-approved institutions across India.
           </p>
@@ -40,54 +40,29 @@ export const AboutPage: React.FC = () => {
               Pioneering Academic Identity Assurance
             </h2>
             <p style={{ fontSize: '14px', color: '#475467', lineHeight: 1.7, marginBottom: '14px' }}>
-              SATYA-APAAR (Student Admission Trust & Yield Assurance) is an AI-assisted, auditable platform designed to reconcile institutional admission submissions with individual student records across AICTE-approved institutions.
+              SATYA-APAAR 2.1 (Student Admission Trust & Yield Assurance) is an AI-assisted, auditable platform designed to reconcile institutional admission submissions with individual student records across AICTE-approved institutions.
             </p>
             <p style={{ fontSize: '14px', color: '#475467', lineHeight: 1.7 }}>
               By connecting with APAAR (Automated Permanent Academic Account Registry) and implementing temporal enrolment integrity (TEIE), the platform verifies every admission, monitors approved seat quotas, and prevents ghost batches or duplicate enrolments.
             </p>
           </div>
 
-          <div style={{
-            position: 'relative',
-            borderRadius: '16px',
-            overflow: 'hidden',
-            backgroundColor: '#001e46',
-            border: '1px solid #dce5ef',
-            boxShadow: 'var(--shadow-md)',
-            minHeight: '260px',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-          }}>
+          <div>
             <img
               src="/assets/hero/campus_about.png"
-              alt="Institution Campus"
+              alt="Indian Institute Campus"
               style={{
                 width: '100%',
-                height: '260px',
+                maxHeight: '280px',
                 objectFit: 'cover',
-                display: 'block',
+                borderRadius: '12px',
+                border: '1px solid #dce5ef',
+                boxShadow: 'var(--shadow-md)',
               }}
               onError={(e) => {
                 (e.target as HTMLElement).style.display = 'none';
               }}
             />
-            <div style={{
-              position: 'absolute',
-              bottom: 0,
-              left: 0,
-              right: 0,
-              background: 'linear-gradient(to top, rgba(0,30,70,0.94) 0%, rgba(0,30,70,0.4) 60%, transparent 100%)',
-              padding: '20px 24px 16px 24px',
-              color: '#ffffff',
-            }}>
-              <div style={{ fontSize: '14px', fontWeight: 700, color: '#fde68a' }}>
-                National Admission Assurance Infrastructure
-              </div>
-              <div style={{ fontSize: '12px', color: '#cbd5e1', marginTop: '2px' }}>
-                Bridging institutional autonomy with transparent verifiable accountability.
-              </div>
-            </div>
           </div>
         </div>
 
@@ -104,7 +79,7 @@ export const AboutPage: React.FC = () => {
             <span>Problem Statement (SIH26263)</span>
           </h3>
           <p style={{ fontSize: '13.5px', color: '#78350f', lineHeight: 1.6 }}>
-            Student admission data in Indian technical higher education is often fragmented, recorded across disparate institutional ERPs, and difficult to verify nationally in real time. This leads to issues such as unaccounted seat utilization, potential duplicate admissions across states, prolonged manual verification delays, and limited auditability for regulatory bodies. SATYA-APAAR solves this by transforming institution-reported data into reconciled, time-aware, and cryptographically auditable records.
+            Student admission data in Indian technical higher education is often fragmented, recorded across disparate institutional ERPs, and difficult to verify nationally in real time. This leads to issues such as unaccounted seat utilization, potential duplicate admissions across states, prolonged manual verification delays, and limited auditability for regulatory bodies. SATYA-APAAR 2.1 solves this by transforming institution-reported data into reconciled, time-aware, and cryptographically auditable records.
           </p>
         </div>
 
@@ -243,7 +218,7 @@ export const AboutPage: React.FC = () => {
             Project Background & Genesis
           </h3>
           <p style={{ fontSize: '13.5px', color: '#475467', lineHeight: 1.7 }}>
-            With the nationwide introduction of APAAR (Automated Permanent Academic Account Registry) under the National Education Policy (NEP 2020), every student in India receives a lifelong 12-digit academic identifier. SATYA-APAAR builds directly on top of this foundation, providing the vital assurance and reconciliation layer required by AICTE to ensure that institutional admissions match approved quotas, transfer histories are validated, and verifiable academic credentials can be securely shared with verifiers.
+            With the nationwide introduction of APAAR (Automated Permanent Academic Account Registry) under the National Education Policy (NEP 2020), every student in India receives a lifelong 12-digit academic identifier. SATYA-APAAR 2.1 builds directly on top of this foundation, providing the vital assurance and reconciliation layer required by AICTE to ensure that institutional admissions match approved quotas, transfer histories are validated, and verifiable academic credentials can be securely shared with verifiers.
           </p>
         </div>
       </div>

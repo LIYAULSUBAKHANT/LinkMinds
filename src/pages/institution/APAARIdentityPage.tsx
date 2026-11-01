@@ -270,7 +270,7 @@ export const APAARIdentityPage: React.FC = () => {
             <span>Cryptographic Pseudonymization & Adapter Simulation</span>
           </h3>
           <p style={{ fontSize: '13px', color: '#475467', lineHeight: 1.6, marginBottom: '20px' }}>
-            SATYA-APAAR never stores raw APAAR identifiers in browser storage or public viewports. Identifiers are salted and hashed via client-side HMAC-SHA256 tokens in this prototype demonstration.
+            SATYA-APAAR 2.1 never stores raw APAAR identifiers in browser storage or public viewports. Identifiers are salted and hashed via client-side HMAC-SHA256 tokens in this prototype demonstration.
           </p>
 
           <div style={{ backgroundColor: '#f8fafc', padding: '16px', borderRadius: '8px', border: '1px solid #e2e8f0', display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '12.5px' }}>

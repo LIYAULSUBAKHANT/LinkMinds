@@ -32,7 +32,7 @@ export const NotFoundPage: React.FC = () => {
         Page Not Found (404)
       </h1>
       <p style={{ fontSize: '13.5px', color: '#475467', lineHeight: 1.6, marginBottom: '24px' }}>
-        The requested SATYA-APAAR navigation route does not exist or has been relocated.
+        The requested SATYA-APAAR 2.1 navigation route does not exist or has been relocated.
       </p>
 
       <div style={{ display: 'flex', justifyContent: 'center', gap: '12px' }}>
