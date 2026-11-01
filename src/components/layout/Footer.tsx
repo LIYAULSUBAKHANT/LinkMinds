@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, ExternalLink, Shield } from 'lucide-react';
+import { BrandLogo } from '../ui/BrandLogo';
 
 export const Footer: React.FC = () => {
   return (
@@ -26,12 +27,7 @@ export const Footer: React.FC = () => {
         }}>
           {/* Column 1: Organization & Identity */}
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '14px' }}>
-              <span style={{ fontSize: '20px', fontWeight: 800, letterSpacing: '-0.02em', color: '#ffffff' }}>
-                SATYA-APAAR
-              </span>
-              
-            </div>
+            <div style={{ marginBottom: "16px" }}><BrandLogo variant="dark" size="sm" subtitle="Student Admission Trust & Yield Assurance" to="/" /></div>
             <p style={{ fontSize: '13px', color: '#cbd5e1', lineHeight: '1.6', marginBottom: '16px' }}>
               Student Admission Trust & Yield Assurance for AICTE-approved institutions.
               A unified platform to reconcile admissions, verify APAAR identities, and ensure zero unallocated seats.
@@ -92,14 +88,8 @@ export const Footer: React.FC = () => {
                 <MapPin size={16} color="#f59e0b" style={{ flexShrink: 0, marginTop: '2px' }} />
                 <span>Nelson Mandela Marg, Vasant Kunj, New Delhi - 110070</span>
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <Phone size={14} color="#f59e0b" style={{ flexShrink: 0 }} />
-                <span>Toll-Free: 1800 123 4567 (Demo)</span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <Mail size={14} color="#f59e0b" style={{ flexShrink: 0 }} />
-                <span>support@satya-apaar.gov.in</span>
-              </div>
+              <div style={{ marginBottom: "16px" }}><BrandLogo variant="dark" size="sm" subtitle="Student Admission Trust & Yield Assurance" to="/" /></div>
+              <div style={{ marginBottom: "16px" }}><BrandLogo variant="dark" size="sm" subtitle="Student Admission Trust & Yield Assurance" to="/" /></div>
             </div>
           </div>
         </div>

@@ -47,22 +47,47 @@ export const AboutPage: React.FC = () => {
             </p>
           </div>
 
-          <div>
+          <div style={{
+            position: 'relative',
+            borderRadius: '16px',
+            overflow: 'hidden',
+            backgroundColor: '#001e46',
+            border: '1px solid #dce5ef',
+            boxShadow: 'var(--shadow-md)',
+            minHeight: '260px',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+          }}>
             <img
               src="/assets/hero/campus_about.png"
-              alt="Indian Institute Campus"
+              alt="Institution Campus"
               style={{
                 width: '100%',
-                maxHeight: '280px',
+                height: '260px',
                 objectFit: 'cover',
-                borderRadius: '12px',
-                border: '1px solid #dce5ef',
-                boxShadow: 'var(--shadow-md)',
+                display: 'block',
               }}
               onError={(e) => {
                 (e.target as HTMLElement).style.display = 'none';
               }}
             />
+            <div style={{
+              position: 'absolute',
+              bottom: 0,
+              left: 0,
+              right: 0,
+              background: 'linear-gradient(to top, rgba(0,30,70,0.94) 0%, rgba(0,30,70,0.4) 60%, transparent 100%)',
+              padding: '20px 24px 16px 24px',
+              color: '#ffffff',
+            }}>
+              <div style={{ fontSize: '14px', fontWeight: 700, color: '#fde68a' }}>
+                National Admission Assurance Infrastructure
+              </div>
+              <div style={{ fontSize: '12px', color: '#cbd5e1', marginTop: '2px' }}>
+                Bridging institutional autonomy with transparent verifiable accountability.
+              </div>
+            </div>
           </div>
         </div>
 

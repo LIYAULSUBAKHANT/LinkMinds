@@ -149,7 +149,7 @@ export const HomePage: React.FC = () => {
             </div>
           </div>
 
-          {/* Hero Right Visual: Student Image with Floating Feature Badges */}
+                    {/* Hero Right Visual: Student Identity & Trust Assurance Card */}
           <div style={{
             position: 'relative',
             display: 'flex',
@@ -158,66 +158,107 @@ export const HomePage: React.FC = () => {
           }}>
             <div style={{
               position: 'relative',
-              borderRadius: '16px',
+              borderRadius: '20px',
               overflow: 'hidden',
-              boxShadow: '0 20px 40px rgba(0,0,0,0.4)',
-              border: '2px solid rgba(255, 255, 255, 0.15)',
-              maxWidth: '440px',
+              boxShadow: '0 24px 48px rgba(0, 15, 45, 0.5)',
+              border: '1px solid rgba(255, 255, 255, 0.2)',
+              maxWidth: '460px',
               width: '100%',
-              backgroundColor: '#001e46',
+              background: 'linear-gradient(145deg, #001e46 0%, #00122e 100%)',
+              color: '#ffffff',
             }}>
-              <img
-                src="/assets/hero/hero_student.png"
-                alt="AICTE Student Identity"
-                style={{
-                  width: '100%',
-                  height: '320px',
-                  objectFit: 'cover',
-                  display: 'block',
-                }}
-                onError={(e) => {
-                  (e.target as HTMLElement).style.display = 'none';
-                }}
-              />
+              {/* Photo layer with gradient blend */}
+              <div style={{ position: 'relative', height: '220px', overflow: 'hidden' }}>
+                <img
+                  src="/assets/hero/hero_student.png"
+                  alt="Student Academic Identity"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    objectPosition: 'center 20%',
+                    opacity: 0.92,
+                  }}
+                  onError={(e) => {
+                    (e.target as HTMLElement).style.display = 'none';
+                  }}
+                />
+                <div style={{
+                  position: 'absolute',
+                  inset: 0,
+                  background: 'linear-gradient(to bottom, rgba(0,30,70,0.1) 0%, rgba(0,18,46,0.95) 100%)',
+                }} />
 
-              {/* Floating Feature Chip 1 */}
-              <div style={{
-                position: 'absolute',
-                top: '16px',
-                left: '16px',
-                backgroundColor: 'rgba(255, 255, 255, 0.95)',
-                color: '#001e46',
-                padding: '8px 12px',
-                borderRadius: '8px',
-                boxShadow: '0 4px 10px rgba(0,0,0,0.2)',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '8px',
-                fontSize: '12px',
-                fontWeight: 700,
-              }}>
-                <CheckCircle2 size={16} color="#16a34a" />
-                <span>APAAR ID Verified</span>
+                {/* Floating Verified Badge */}
+                <div style={{
+                  position: 'absolute',
+                  top: '16px',
+                  right: '16px',
+                  backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                  color: '#001e46',
+                  padding: '6px 12px',
+                  borderRadius: '20px',
+                  boxShadow: '0 4px 12px rgba(0,0,0,0.25)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  fontSize: '11.5px',
+                  fontWeight: 700,
+                }}>
+                  <CheckCircle2 size={14} color="#16a34a" />
+                  <span>APAAR Verified</span>
+                </div>
               </div>
 
-              {/* Floating Feature Chip 2 */}
-              <div style={{
-                position: 'absolute',
-                bottom: '16px',
-                right: '16px',
-                backgroundColor: 'rgba(255, 255, 255, 0.95)',
-                color: '#001e46',
-                padding: '8px 12px',
-                borderRadius: '8px',
-                boxShadow: '0 4px 10px rgba(0,0,0,0.2)',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '8px',
-                fontSize: '12px',
-                fontWeight: 700,
-              }}>
-                <Shield size={16} color="#155eef" />
-                <span>AI-Powered Reconciliation</span>
+              {/* Lower Card: Micro Credentials & Verification */}
+              <div style={{ padding: '20px 24px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+                  <div>
+                    <div style={{ fontSize: '16px', fontWeight: 700, color: '#ffffff' }}>
+                      Priya R. Sharma
+                    </div>
+                    <div style={{ fontSize: '11px', color: '#93c5fd', fontFamily: 'monospace' }}>
+                      APAAR-2026-8841-9021
+                    </div>
+                  </div>
+                  <div style={{
+                    padding: '4px 10px',
+                    borderRadius: '6px',
+                    background: 'rgba(16, 185, 129, 0.2)',
+                    color: '#34d399',
+                    fontSize: '11px',
+                    fontWeight: 700,
+                    border: '1px solid rgba(16, 185, 129, 0.4)',
+                  }}>
+                    Active Enrolment
+                  </div>
+                </div>
+
+                {/* Micro Metric Badges */}
+                <div style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(3, 1fr)',
+                  gap: '8px',
+                  padding: '12px 10px',
+                  borderRadius: '10px',
+                  background: 'rgba(255, 255, 255, 0.05)',
+                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  fontSize: '11px',
+                  textAlign: 'center',
+                }}>
+                  <div>
+                    <div style={{ color: '#94a3b8', fontSize: '10px' }}>Programme</div>
+                    <div style={{ fontWeight: 700, color: '#ffffff', marginTop: '2px' }}>B.Tech CSE</div>
+                  </div>
+                  <div style={{ borderLeft: '1px solid rgba(255,255,255,0.1)', borderRight: '1px solid rgba(255,255,255,0.1)' }}>
+                    <div style={{ color: '#94a3b8', fontSize: '10px' }}>Seat Quota</div>
+                    <div style={{ fontWeight: 700, color: '#fde68a', marginTop: '2px' }}>Merit / State</div>
+                  </div>
+                  <div>
+                    <div style={{ color: '#94a3b8', fontSize: '10px' }}>Audit Proof</div>
+                    <div style={{ fontWeight: 700, color: '#60a5fa', marginTop: '2px' }}>SHA-256 ✓</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

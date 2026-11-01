@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { UserRole } from '../../types';
+import { BrandLogo } from '../ui/BrandLogo';
 
 interface AuthenticatedHeaderProps {
   onToggleSidebar?: () => void;
@@ -71,23 +72,9 @@ export const AuthenticatedHeader: React.FC<AuthenticatedHeaderProps> = ({
       justifyContent: 'space-between',
       padding: '0 20px',
     }}>
-      {/* Left: Brand Identity & Toggle */}
+            {/* Left: Brand Identity & Toggle */}
       <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-        <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
-          <img 
-            src="/assets/logos/govt_aicte_brand.png" 
-            alt="AICTE" 
-            style={{ height: '38px', objectFit: 'contain' }}
-            onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
-          />
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-              <span style={{ fontSize: '16px', fontWeight: 800, color: '#001e46' }}>SATYA-APAAR</span>
-              
-            </div>
-            <span style={{ fontSize: '10px', color: '#64748b', fontWeight: 500 }}>AICTE Verification Portal</span>
-          </div>
-        </Link>
+        <BrandLogo size="sm" subtitle="Admission Trust & Verification Portal" to="/dashboard" />
       </div>
 
       {/* Center/Right: Demo Role Switcher, Reset Demo, Notifications, Profile */}
