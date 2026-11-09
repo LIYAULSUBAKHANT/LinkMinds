@@ -114,6 +114,7 @@ export const InstitutionDashboardPage: React.FC = () => {
           icon={<AlertTriangle size={18} />}
           trend={{ value: '18 records require review', isNeutral: true }}
           accentColor="#f59e0b"
+          isPulsing={true}
           onClick={() => navigate('/institution/submissions/validation')}
         />
         <DashboardStatCard

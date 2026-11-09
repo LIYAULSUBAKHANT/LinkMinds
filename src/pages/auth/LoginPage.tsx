@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import { UserRole } from '../../types';
+import { BrandHeaderLogo } from '../../components/ui/BrandHeaderLogo';
 import { 
   Eye, EyeOff, ShieldCheck, Building2, UserCheck, 
   Settings, Key, AlertCircle, Info, ExternalLink, ArrowRight 
@@ -88,20 +89,8 @@ export const LoginPage: React.FC = () => {
           position: 'relative',
         }} className="login-left-pane">
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '14px' }}>
-              <span style={{ fontSize: '22px', fontWeight: 800, letterSpacing: '-0.02em', color: '#ffffff' }}>
-                SATYA-APAAR
-              </span>
-              <span style={{
-                backgroundColor: '#155eef',
-                color: '#ffffff',
-                fontSize: '11px',
-                fontWeight: 700,
-                padding: '2px 6px',
-                borderRadius: '4px',
-              }}>
-                2.1
-              </span>
+            <div style={{ marginBottom: '18px' }}>
+              <BrandHeaderLogo variant="dark" size="md" subtitle="Institutional Verification Portal" to="/" />
             </div>
             <p style={{ fontSize: '13px', color: '#cbd5e1', lineHeight: '1.6', marginBottom: '24px' }}>
               Student Admission Trust & Yield Assurance for AICTE-approved institutions across India.
@@ -150,7 +139,7 @@ export const LoginPage: React.FC = () => {
         <div style={{ padding: '40px 36px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <div style={{ marginBottom: '24px' }}>
             <h2 style={{ fontSize: '22px', fontWeight: 800, color: '#001e46', marginBottom: '6px' }}>
-              Welcome to SATYA-APAAR 2.1
+              Welcome to SATYA-APAAR
             </h2>
             <p style={{ fontSize: '13px', color: '#64748b' }}>
               Sign in to access your dashboard and manage student admission data securely.
@@ -326,8 +315,8 @@ export const LoginPage: React.FC = () => {
                 borderColor: '#cbd5e1',
               }}
             >
-              <img src="/assets/logos/govt_aicte_brand.png" alt="Gov" style={{ height: '16px' }} onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }} />
-              <span>Government SSO (NIC Parichay)</span>
+              <ShieldCheck size={16} color="#155eef" />
+              <span>National SSO (MeriPehchaan Gateway)</span>
             </button>
           </form>
 

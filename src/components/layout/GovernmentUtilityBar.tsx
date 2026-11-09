@@ -18,7 +18,7 @@ export const GovernmentUtilityBar: React.FC = () => {
       minHeight: '34px',
       zIndex: 100,
     }}>
-      {/* Left: Government of India Identity */}
+      {/* Left: National Admission Assurance Identity */}
       <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
           {/* Mini Tricolour indicator */}
@@ -29,7 +29,7 @@ export const GovernmentUtilityBar: React.FC = () => {
             borderRadius: '2px',
             border: '1px solid rgba(255,255,255,0.4)'
           }} />
-          <span style={{ fontWeight: 600, letterSpacing: '0.02em' }}>GOVERNMENT OF INDIA</span>
+          <span style={{ fontWeight: 700, letterSpacing: '0.03em', fontSize: '11.5px' }}>NATIONAL ADMISSION ASSURANCE PLATFORM</span>
         </div>
         <span style={{ color: 'rgba(255,255,255,0.3)' }}>|</span>
         <button

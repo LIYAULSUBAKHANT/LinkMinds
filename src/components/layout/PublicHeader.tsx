@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
-import { Menu, X, ArrowRight, ShieldCheck, LogIn } from 'lucide-react';
+import { Menu, X, LogIn } from 'lucide-react';
+import { BrandHeaderLogo } from '../ui/BrandHeaderLogo';
 
 export const PublicHeader: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -25,63 +26,22 @@ export const PublicHeader: React.FC = () => {
       position: 'sticky',
       top: 0,
       zIndex: 90,
+      height: '68px',
+      display: 'flex',
+      alignItems: 'center',
     }}>
       <div style={{
         maxWidth: '1280px',
+        width: '100%',
         margin: '0 auto',
-        padding: '10px 24px',
+        padding: '0 24px',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
+        height: '100%',
       }}>
-        {/* Ministry & AICTE Wordmark */}
-        <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '16px', textDecoration: 'none' }}>
-          <img 
-            src="/assets/logos/govt_aicte_brand.png" 
-            alt="Ministry of Education & AICTE" 
-            style={{ height: '46px', objectFit: 'contain' }}
-            onError={(e) => {
-              // Fallback styling if image fails
-              (e.target as HTMLElement).style.display = 'none';
-            }}
-          />
-          <div style={{
-            display: 'flex',
-            flexDirection: 'column',
-            borderLeft: '2px solid #e2e8f0',
-            paddingLeft: '14px',
-          }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <span style={{
-                fontSize: '18px',
-                fontWeight: 800,
-                color: '#001e46',
-                letterSpacing: '-0.02em',
-              }}>
-                SATYA-APAAR
-              </span>
-              <span style={{
-                backgroundColor: '#155eef',
-                color: '#ffffff',
-                fontSize: '11px',
-                fontWeight: 700,
-                padding: '2px 6px',
-                borderRadius: '4px',
-              }}>
-                2.1
-              </span>
-            </div>
-            <span style={{
-              fontSize: '10.5px',
-              color: '#475467',
-              fontWeight: 500,
-              maxWidth: '340px',
-              lineHeight: 1.2,
-            }}>
-              Student Admission Trust & Yield Assurance | AICTE
-            </span>
-          </div>
-        </Link>
+        {/* Custom Project Logo (Zero Restricted Sovereign Emblems) */}
+        <BrandHeaderLogo size="md" subtitle="Student Admission Trust & Yield Assurance" />
 
         {/* Desktop Navigation: Exactly 5 links + Separate Login/Register CTA */}
         <nav style={{ display: 'none', alignItems: 'center', gap: '28px' }} className="desktop-nav">
@@ -93,8 +53,9 @@ export const PublicHeader: React.FC = () => {
               fontWeight: isActive ? 600 : 500,
               fontSize: '14px',
               textDecoration: 'none',
-              padding: '6px 2px',
+              padding: '8px 2px',
               borderBottom: isActive ? '2px solid #155eef' : '2px solid transparent',
+              transition: 'all 0.15s ease',
             })}
           >
             Home
@@ -106,8 +67,9 @@ export const PublicHeader: React.FC = () => {
               fontWeight: isActive ? 600 : 500,
               fontSize: '14px',
               textDecoration: 'none',
-              padding: '6px 2px',
+              padding: '8px 2px',
               borderBottom: isActive ? '2px solid #155eef' : '2px solid transparent',
+              transition: 'all 0.15s ease',
             })}
           >
             About Us
@@ -119,8 +81,9 @@ export const PublicHeader: React.FC = () => {
               fontWeight: isActive ? 600 : 500,
               fontSize: '14px',
               textDecoration: 'none',
-              padding: '6px 2px',
+              padding: '8px 2px',
               borderBottom: isActive ? '2px solid #155eef' : '2px solid transparent',
+              transition: 'all 0.15s ease',
             })}
           >
             Features
@@ -132,8 +95,9 @@ export const PublicHeader: React.FC = () => {
               fontWeight: isActive ? 600 : 500,
               fontSize: '14px',
               textDecoration: 'none',
-              padding: '6px 2px',
+              padding: '8px 2px',
               borderBottom: isActive ? '2px solid #155eef' : '2px solid transparent',
+              transition: 'all 0.15s ease',
             })}
           >
             Resources
@@ -146,25 +110,29 @@ export const PublicHeader: React.FC = () => {
               fontWeight: 500,
               fontSize: '14px',
               textDecoration: 'none',
-              padding: '6px 2px',
+              padding: '8px 2px',
+              borderBottom: '2px solid transparent',
+              transition: 'all 0.15s ease',
             }}
           >
             Dashboard
           </a>
 
-          {/* Separate Orange Login/Register CTA */}
+          {/* Highlighted Orange Login/Register CTA */}
           <Link
             to="/login"
-            className="btn btn-orange"
+            className="btn btn-orange pulse-cta"
             style={{
               display: 'inline-flex',
               alignItems: 'center',
-              gap: '6px',
-              padding: '8px 18px',
+              gap: '7px',
+              padding: '9px 20px',
               borderRadius: '6px',
-              fontSize: '13px',
+              fontSize: '13.5px',
+              fontWeight: 600,
               textDecoration: 'none',
-              boxShadow: '0 2px 4px rgba(245, 158, 11, 0.2)',
+              boxShadow: '0 2px 6px rgba(245, 158, 11, 0.25)',
+              transition: 'transform 0.15s ease, box-shadow 0.15s ease',
             }}
           >
             <LogIn size={15} />
@@ -195,12 +163,18 @@ export const PublicHeader: React.FC = () => {
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
         <div style={{
+          position: 'absolute',
+          top: '68px',
+          left: 0,
+          right: 0,
           backgroundColor: '#ffffff',
-          borderTop: '1px solid var(--color-border-light)',
+          borderBottom: '1px solid var(--color-border-light)',
+          boxShadow: 'var(--shadow-md)',
           padding: '16px 24px',
           display: 'flex',
           flexDirection: 'column',
           gap: '12px',
+          zIndex: 100,
         }}>
           <Link to="/" onClick={() => setMobileMenuOpen(false)} style={{ padding: '8px 0', color: '#1e293b', fontWeight: 500 }}>Home</Link>
           <Link to="/about" onClick={() => setMobileMenuOpen(false)} style={{ padding: '8px 0', color: '#1e293b', fontWeight: 500 }}>About Us</Link>
@@ -222,4 +196,3 @@ export const PublicHeader: React.FC = () => {
     </header>
   );
 };
-

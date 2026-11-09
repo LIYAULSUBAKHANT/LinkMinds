@@ -6,6 +6,9 @@ import {
   ArrowRight, ChevronLeft, ChevronRight, CheckCircle2, 
   AlertCircle, ExternalLink, Award, Sparkles, Database 
 } from 'lucide-react';
+import { LiveAdmissionMarquee } from '../../components/home/LiveAdmissionMarquee';
+import { ApaarBenefitsShowcase } from '../../components/home/ApaarBenefitsShowcase';
+import { EcosystemMarquee } from '../../components/home/EcosystemMarquee';
 
 export const HomePage: React.FC = () => {
   const { isAuthenticated, getDashboardPath } = useAuth();
@@ -45,7 +48,7 @@ export const HomePage: React.FC = () => {
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', width: '100%', minHeight: '100vh', overflowX: 'hidden' }}>
       {/* 1. HERO SECTION: Dark Navy / Royal Blue with Technical Grid Texture */}
       <section style={{
         background: 'linear-gradient(135deg, #001e46 0%, #001533 50%, #0a2558 100%)',
@@ -149,76 +152,58 @@ export const HomePage: React.FC = () => {
             </div>
           </div>
 
-          {/* Hero Right Visual: Student Image with Floating Feature Badges */}
+          {/* Hero Right Visual: Clean, high-tech student identity glass showcase */}
           <div style={{
             position: 'relative',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-            <div style={{
-              position: 'relative',
-              borderRadius: '16px',
-              overflow: 'hidden',
-              boxShadow: '0 20px 40px rgba(0,0,0,0.4)',
-              border: '2px solid rgba(255, 255, 255, 0.15)',
-              maxWidth: '440px',
-              width: '100%',
-              backgroundColor: '#001e46',
-            }}>
+            <div 
+              className="animate-float"
+              style={{
+                position: 'relative',
+                borderRadius: '20px',
+                overflow: 'hidden',
+                boxShadow: '0 25px 60px -15px rgba(0, 210, 255, 0.35), 0 0 0 1px rgba(0, 210, 255, 0.4)',
+                maxWidth: '450px',
+                width: '100%',
+                backgroundColor: '#001e46',
+              }}
+            >
+              {/* Top Holographic Glass Bar */}
+              <div style={{
+                backgroundColor: 'rgba(0, 21, 51, 0.85)',
+                backdropFilter: 'blur(8px)',
+                padding: '10px 16px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                borderBottom: '1px solid rgba(0, 210, 255, 0.25)',
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#00d2ff' }} className="pulse-beacon" />
+                  <span style={{ fontSize: '11px', fontWeight: 800, color: '#00d2ff', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                    Admission Trust Command
+                  </span>
+                </div>
+                <span style={{ fontSize: '10.5px', color: '#94a3b8', fontFamily: 'monospace' }}>
+                  AICTE-TEIE ACTIVE
+                </span>
+              </div>
+
+              {/* Natural Aspect Ratio Image with no clipping */}
               <img
                 src="/assets/hero/hero_student.png"
-                alt="AICTE Student Identity"
+                alt="SATYA-APAAR Student Admission Integrity"
                 style={{
                   width: '100%',
-                  height: '320px',
-                  objectFit: 'cover',
+                  height: 'auto',
+                  aspectRatio: '450 / 375',
+                  objectFit: 'contain',
                   display: 'block',
                 }}
-                onError={(e) => {
-                  (e.target as HTMLElement).style.display = 'none';
-                }}
               />
-
-              {/* Floating Feature Chip 1 */}
-              <div style={{
-                position: 'absolute',
-                top: '16px',
-                left: '16px',
-                backgroundColor: 'rgba(255, 255, 255, 0.95)',
-                color: '#001e46',
-                padding: '8px 12px',
-                borderRadius: '8px',
-                boxShadow: '0 4px 10px rgba(0,0,0,0.2)',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '8px',
-                fontSize: '12px',
-                fontWeight: 700,
-              }}>
-                <CheckCircle2 size={16} color="#16a34a" />
-                <span>APAAR ID Verified</span>
-              </div>
-
-              {/* Floating Feature Chip 2 */}
-              <div style={{
-                position: 'absolute',
-                bottom: '16px',
-                right: '16px',
-                backgroundColor: 'rgba(255, 255, 255, 0.95)',
-                color: '#001e46',
-                padding: '8px 12px',
-                borderRadius: '8px',
-                boxShadow: '0 4px 10px rgba(0,0,0,0.2)',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '8px',
-                fontSize: '12px',
-                fontWeight: 700,
-              }}>
-                <Shield size={16} color="#155eef" />
-                <span>AI-Powered Reconciliation</span>
-              </div>
             </div>
           </div>
         </div>
@@ -233,107 +218,164 @@ export const HomePage: React.FC = () => {
         `}</style>
       </section>
 
-      {/* 2. FIVE CORE SERVICE TILES SECTION */}
+      {/* Real-time Ingestion Stream: Continuous Right-to-Left Marquee Ticker (DPDP Compliant) */}
+      <LiveAdmissionMarquee />
+
+      {/* 2. FIVE CORE SERVICE TILES: Responsive 5-Column High-Tech Grid */}
       <section style={{
         maxWidth: '1280px',
-        margin: '-30px auto 48px auto',
+        margin: '36px auto 56px auto',
         padding: '0 24px',
         position: 'relative',
         zIndex: 5,
+        width: '100%',
+        boxSizing: 'border-box',
       }}>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))',
-          gap: '16px',
-        }}>
+        <div className="service-tiles-grid">
           {[
             {
               title: 'Institution Onboarding',
               desc: 'Register and submit institutional admission data securely.',
-              icon: <Building2 size={22} color="#155eef" />,
+              icon: <Building2 size={24} color="#155eef" />,
               link: '/institution/registration',
+              accent: '#155eef',
+              badge: 'Step 1',
             },
             {
               title: 'Student Verification',
               desc: 'APAAR-based academic identity resolution & verification.',
-              icon: <UserCheck size={22} color="#16a34a" />,
+              icon: <UserCheck size={24} color="#16a34a" />,
               link: '/features',
+              accent: '#16a34a',
+              badge: 'Step 2',
             },
             {
               title: 'Data Reconciliation',
               desc: 'Aggregate and student-level mapping and discrepancy analysis.',
-              icon: <GitCompare size={22} color="#f59e0b" />,
+              icon: <GitCompare size={24} color="#f59e0b" />,
               link: '/features',
+              accent: '#f59e0b',
+              badge: 'Step 3',
             },
             {
               title: 'Seat Monitoring',
               desc: 'Track approved intake, quotas and supernumerary utilisation.',
-              icon: <Shield size={22} color="#8b5cf6" />,
+              icon: <Shield size={24} color="#8b5cf6" />,
               link: '/features',
+              accent: '#8b5cf6',
+              badge: 'Step 4',
             },
             {
               title: 'Audit & Review',
               desc: 'Transparent, evidence-based review decisions & tamper-evident logs.',
-              icon: <FileCheck size={22} color="#0284c7" />,
+              icon: <FileCheck size={24} color="#0284c7" />,
               link: '/features',
+              accent: '#0284c7',
+              badge: 'Step 5',
             },
           ].map((tile, idx) => (
             <Link
               key={idx}
               to={tile.link}
+              className="service-card-interactive"
               style={{
                 backgroundColor: '#ffffff',
                 border: '1px solid #dce5ef',
-                borderRadius: '8px',
-                padding: '20px 16px',
-                boxShadow: 'var(--shadow-md)',
+                borderRadius: '12px',
+                padding: '22px 18px',
+                boxShadow: '0 4px 14px rgba(0, 30, 70, 0.05)',
                 textDecoration: 'none',
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '10px',
-                transition: 'all 0.15s ease',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-3px)';
-                e.currentTarget.style.borderColor = '#155eef';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.borderColor = '#dce5ef';
+                gap: '12px',
+                position: 'relative',
+                overflow: 'hidden',
+                transition: 'all 0.25s cubic-bezier(0.16, 1, 0.3, 1)',
               }}
             >
+              {/* Top Color Accent Line */}
               <div style={{
-                width: '42px',
-                height: '42px',
-                borderRadius: '8px',
-                backgroundColor: '#eff6ff',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}>
-                {tile.icon}
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                height: '4px',
+                backgroundColor: tile.accent,
+              }} />
+
+              {/* Step Badge & Icon */}
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <div style={{
+                  width: '44px',
+                  height: '44px',
+                  borderRadius: '10px',
+                  backgroundColor: `${tile.accent}14`,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  boxShadow: `0 2px 8px ${tile.accent}22`,
+                }}>
+                  {tile.icon}
+                </div>
+                <span style={{
+                  fontSize: '10.5px',
+                  fontWeight: 700,
+                  color: tile.accent,
+                  backgroundColor: `${tile.accent}12`,
+                  padding: '2px 8px',
+                  borderRadius: '12px',
+                  letterSpacing: '0.04em',
+                  textTransform: 'uppercase',
+                }}>
+                  {tile.badge}
+                </span>
               </div>
-              <h3 style={{ fontSize: '15px', fontWeight: 700, color: '#001e46' }}>
+
+              <h3 style={{ fontSize: '15.5px', fontWeight: 800, color: '#001e46', margin: 0, lineHeight: 1.3 }}>
                 {tile.title}
               </h3>
-              <p style={{ fontSize: '12px', color: '#64748b', lineHeight: 1.5 }}>
+              <p style={{ fontSize: '12px', color: '#64748b', lineHeight: 1.5, margin: 0 }}>
                 {tile.desc}
               </p>
               <div style={{
                 marginTop: 'auto',
-                fontSize: '12px',
-                color: '#155eef',
-                fontWeight: 600,
+                paddingTop: '6px',
+                fontSize: '12.5px',
+                color: tile.accent,
+                fontWeight: 700,
                 display: 'flex',
                 alignItems: 'center',
-                gap: '4px',
+                gap: '6px',
               }}>
                 <span>Explore</span>
-                <ArrowRight size={13} />
+                <ArrowRight size={14} />
               </div>
             </Link>
           ))}
         </div>
+
+        <style>{`
+          .service-tiles-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr) !important;
+            gap: 16px;
+            width: 100%;
+          }
+          @media (max-width: 1100px) {
+            .service-tiles-grid {
+              grid-template-columns: repeat(3, 1fr) !important;
+            }
+          }
+          @media (max-width: 680px) {
+            .service-tiles-grid {
+              grid-template-columns: 1fr !important;
+            }
+          }
+          .service-card-interactive:hover {
+            transform: translateY(-5px) !important;
+            box-shadow: 0 16px 32px -8px rgba(0, 30, 70, 0.12), 0 0 0 1px rgba(21, 94, 239, 0.3) !important;
+          }
+        `}</style>
       </section>
 
       {/* 3. PLATFORM AT A GLANCE (4 METRIC CARDS) */}
@@ -405,6 +447,9 @@ export const HomePage: React.FC = () => {
           ))}
         </div>
       </section>
+
+      {/* APAAR Interactive Benefits Showcase (One Nation One Student ID & Holographic Card) */}
+      <ApaarBenefitsShowcase />
 
       {/* 4. WHAT'S NEW SECTION (CAROUSEL / NOTICES) */}
       <section style={{
@@ -515,56 +560,10 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* 5. SUPPORTED ACADEMIC ECOSYSTEM LOGO STRIP */}
-      <section style={{
-        maxWidth: '1280px',
-        margin: '0 auto 56px auto',
-        padding: '0 24px',
-        textAlign: 'center',
-      }}>
-        <h3 style={{ fontSize: '14px', fontWeight: 700, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '8px' }}>
-          Supported Academic Ecosystem
-        </h3>
-        <p style={{ fontSize: '12px', color: '#94a3b8', marginBottom: '24px' }}>
-          Designed for seamless integration with national digital infrastructure. Actual integration availability depends on authorised access.
-        </p>
+      {/* 5. SUPPORTED ACADEMIC ECOSYSTEM & CONTINUOUS VERIFICATION NETWORK */}
+      <EcosystemMarquee />
 
-        <div style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          alignItems: 'center',
-          justifyContent: 'center',
-          gap: '24px',
-          padding: '20px',
-          backgroundColor: '#ffffff',
-          borderRadius: '8px',
-          border: '1px solid #dce5ef',
-          boxShadow: 'var(--shadow-sm)',
-        }}>
-          {['APAAR', 'DigiLocker', 'Academic Bank of Credits (ABC)', 'NCVET', 'NAD'].map((item, idx) => (
-            <div
-              key={idx}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '8px',
-                padding: '8px 18px',
-                borderRadius: '6px',
-                backgroundColor: '#f8fafc',
-                border: '1px solid #e2e8f0',
-                fontSize: '13px',
-                fontWeight: 700,
-                color: '#1e3a5f',
-              }}
-            >
-              <Database size={15} color="#155eef" />
-              <span>{item}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* 6. ABOUT SATYA-APAAR 2.1 SPLIT SECTION WITH 4 BENEFIT CARDS */}
+      {/* 6. ABOUT SATYA-APAAR SPLIT SECTION WITH 4 BENEFIT CARDS */}
       <section style={{
         maxWidth: '1280px',
         margin: '0 auto 64px auto',
@@ -578,10 +577,10 @@ export const HomePage: React.FC = () => {
         }}>
           <div>
             <h2 style={{ fontSize: '26px', color: '#001e46', fontWeight: 800, marginBottom: '14px' }}>
-              About SATYA-APAAR 2.1
+              About SATYA-APAAR
             </h2>
             <p style={{ fontSize: '14px', color: '#475467', lineHeight: 1.7, marginBottom: '16px' }}>
-              SATYA-APAAR 2.1 is an AI-assisted and auditable platform designed to reconcile student admissions, verify APAAR identities, monitor approved seat utilisation, and ensure zero unallocated or duplicate enrolments across AICTE-approved institutions nationwide.
+              SATYA-APAAR is an AI-assisted and auditable platform designed to reconcile student admissions, verify APAAR identities, monitor approved seat utilisation, and ensure zero unallocated or duplicate enrolments across AICTE-approved institutions nationwide.
             </p>
             <p style={{ fontSize: '14px', color: '#475467', lineHeight: 1.7, marginBottom: '24px' }}>
               By connecting institutional data with APAAR registries and applying transparent temporal integrity rules (TEIE), the platform empowers regulatory authorities with real-time, tamper-evident oversight.

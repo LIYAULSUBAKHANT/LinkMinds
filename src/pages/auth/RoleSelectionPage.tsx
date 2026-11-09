@@ -69,7 +69,7 @@ export const RoleSelectionPage: React.FC = () => {
           Choose Your Role
         </h1>
         <p style={{ fontSize: '14px', color: '#64748b', maxWidth: '600px', margin: '0 auto' }}>
-          Select your authorized access tier to proceed to the designated SATYA-APAAR 2.1 portal workspace.
+          Select your authorized access tier to proceed to the designated SATYA-APAAR portal workspace.
         </p>
       </div>
 
@@ -176,7 +176,7 @@ export const RoleSelectionPage: React.FC = () => {
       }}>
         <Info size={20} color="#2563eb" style={{ flexShrink: 0 }} />
         <div style={{ fontSize: '12.5px', color: '#1e40af', lineHeight: 1.5 }}>
-          <strong>Role-Based Access Control Notice:</strong> SATYA-APAAR 2.1 strictly segregates capabilities by user role. In this SIH demonstration prototype, choosing a role configures a simulated active session with seeded data.
+          <strong>Role-Based Access Control Notice:</strong> SATYA-APAAR strictly segregates capabilities by user role. In this SIH demonstration prototype, choosing a role configures a simulated active session with seeded data.
         </div>
       </div>
 

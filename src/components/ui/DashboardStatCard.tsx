@@ -14,6 +14,7 @@ interface DashboardStatCardProps {
   badge?: React.ReactNode;
   onClick?: () => void;
   accentColor?: string;
+  isPulsing?: boolean;
 }
 
 export const DashboardStatCard: React.FC<DashboardStatCardProps> = ({
@@ -25,23 +26,37 @@ export const DashboardStatCard: React.FC<DashboardStatCardProps> = ({
   badge,
   onClick,
   accentColor = '#155eef',
+  isPulsing = false,
 }) => {
   return (
     <div
       onClick={onClick}
+      className={isPulsing ? 'pulse-card' : ''}
       style={{
         backgroundColor: '#ffffff',
-        border: '1px solid var(--color-border-light)',
+        border: isPulsing ? `1.5px solid ${accentColor}` : '1px solid var(--color-border-light)',
         borderRadius: '8px',
         padding: '16px 18px',
-        boxShadow: 'var(--shadow-sm)',
+        boxShadow: isPulsing ? `0 4px 16px -2px ${accentColor}33` : 'var(--shadow-sm)',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
         cursor: onClick ? 'pointer' : 'default',
-        transition: 'transform 0.15s ease, box-shadow 0.15s ease',
+        transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
         position: 'relative',
         overflow: 'hidden',
+      }}
+      onMouseEnter={(e) => {
+        if (onClick) {
+          e.currentTarget.style.transform = 'translateY(-3px)';
+          e.currentTarget.style.boxShadow = 'var(--shadow-md)';
+        }
+      }}
+      onMouseLeave={(e) => {
+        if (onClick) {
+          e.currentTarget.style.transform = 'translateY(0)';
+          e.currentTarget.style.boxShadow = isPulsing ? `0 4px 16px -2px ${accentColor}33` : 'var(--shadow-sm)';
+        }
       }}
     >
       {/* Top accent bar */}
@@ -56,9 +71,23 @@ export const DashboardStatCard: React.FC<DashboardStatCardProps> = ({
 
       {/* Header row: Title + Icon */}
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
-        <span style={{ fontSize: '13px', fontWeight: 600, color: '#475467' }}>
-          {title}
-        </span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+          {isPulsing && (
+            <span
+              style={{
+                width: '6px',
+                height: '6px',
+                borderRadius: '50%',
+                backgroundColor: accentColor,
+                display: 'inline-block',
+              }}
+              className="pulse-beacon"
+            />
+          )}
+          <span style={{ fontSize: '13px', fontWeight: 600, color: '#475467' }}>
+            {title}
+          </span>
+        </div>
         {icon && (
           <div style={{
             width: '32px',

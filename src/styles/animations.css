@@ -1,0 +1,251 @@
+/* SATYA-APAAR High-Performance Motion System */
+
+/* 1. Continuous Right-to-Left Marquee Ticker (GPU Accelerated) */
+.marquee-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 32s linear infinite;
+  will-change: transform;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.marquee-track-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll-reverse 38s linear infinite;
+  will-change: transform;
+}
+
+.marquee-track-reverse:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marquee-scroll-reverse {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* 2. Floating Physics for Hero & Cards */
+.animate-float {
+  animation: float-gentle 5s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(0, -8px, 0) rotate(0.6deg);
+  }
+}
+
+/* 3. Holographic Sheen & Shimmer on Digital Cards */
+.hologram-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.hologram-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 20px 40px -10px rgba(0, 210, 255, 0.25), 0 0 20px rgba(21, 94, 239, 0.2);
+}
+
+.hologram-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(0, 210, 255, 0.12) 55%,
+    transparent 70%
+  );
+  transform: rotate(25deg) translateY(-100%);
+  animation: hologram-sweep 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes hologram-sweep {
+  0%, 75% {
+    transform: rotate(25deg) translateY(-120%);
+  }
+  85%, 100% {
+    transform: rotate(25deg) translateY(120%);
+  }
+}
+
+/* 4. Radar Status Pulses */
+.pulse-beacon {
+  position: relative;
+  display: inline-flex;
+}
+
+.pulse-beacon::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background-color: inherit;
+  opacity: 0.75;
+  animation: beacon-ping 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes beacon-ping {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+  75%, 100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+/* 5. Glowing Benefit Pill Selection */
+.benefit-pill-active {
+  background: linear-gradient(135deg, #001e46 0%, #0d3880 100%) !important;
+  color: #ffffff !important;
+  border-color: #00d2ff !important;
+  box-shadow: 0 8px 24px -4px rgba(0, 210, 255, 0.35), 0 0 12px rgba(21, 94, 239, 0.25) !important;
+  transform: translateX(8px);
+}
+
+.benefit-pill {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.benefit-pill:hover:not(.benefit-pill-active) {
+  transform: translateX(4px);
+  border-color: #93c5fd;
+  background-color: #f0f7ff;
+}
+
+/* 6. Trajectory Animated Dotted Line */
+@keyframes trajectory-flow {
+  from {
+    stroke-dashoffset: 40;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animated-trajectory {
+  stroke-dasharray: 6 6;
+  animation: trajectory-flow 1.5s linear infinite;
+}
+
+/* 7. Subtle CTA Button Glow */
+.pulse-cta {
+  animation: cta-glow 3s ease-in-out infinite;
+}
+
+@keyframes cta-glow {
+  0%, 100% {
+    box-shadow: 0 2px 6px rgba(245, 158, 11, 0.25);
+  }
+  50% {
+    box-shadow: 0 4px 16px rgba(245, 158, 11, 0.55);
+  }
+}
+
+/* 8. QR Code Laser Scan Sweep */
+@keyframes laser-sweep {
+  0%, 100% {
+    top: 5%;
+    opacity: 0.9;
+  }
+  50% {
+    top: 90%;
+    opacity: 1;
+  }
+}
+
+.qr-scanner-laser {
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00d2ff, #38bdf8, transparent);
+  box-shadow: 0 0 8px #00d2ff, 0 0 14px rgba(0, 210, 255, 0.8);
+  animation: laser-sweep 2.4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* 9. Smart Card EMV Chip Styling */
+.emv-chip {
+  width: 36px;
+  height: 28px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #fef08a 0%, #ca8a04 50%, #eab308 100%);
+  border: 1px solid #a16207;
+  position: relative;
+  box-shadow: inset 0 1px 2px rgba(255,255,255,0.6), 0 2px 4px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+.emv-chip::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #854d0e;
+}
+
+.emv-chip::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #854d0e;
+}
+
+/* 10. Reduced Motion Respect */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track,
+  .marquee-track-reverse,
+  .animate-float,
+  .hologram-card::after,
+  .animated-trajectory,
+  .pulse-beacon::before,
+  .pulse-cta {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+

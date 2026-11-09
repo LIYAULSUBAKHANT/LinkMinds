@@ -102,6 +102,7 @@ export const RecordTrustAuditPage: React.FC = () => {
           subtitle="SHA-256 block continuity"
           icon={<ShieldCheck size={18} />}
           accentColor="#16a34a"
+          isPulsing={chainValid === true}
         />
         <DashboardStatCard
           title="Non-Repudiation Level"

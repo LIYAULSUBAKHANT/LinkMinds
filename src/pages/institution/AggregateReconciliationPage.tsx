@@ -129,6 +129,7 @@ export const AggregateReconciliationPage: React.FC = () => {
           subtitle={activeItem.variance > 0 ? '28 student identities missing' : 'Zero discrepancy'}
           icon={<AlertTriangle size={18} />}
           accentColor={activeItem.variance > 0 ? '#dc2626' : '#16a34a'}
+          isPulsing={activeItem.variance > 0}
         />
         <DashboardStatCard
           title="Reconciliation Outcome"
